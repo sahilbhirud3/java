@@ -1,0 +1,131 @@
+Day1
+
+
+4.1 Display food menu to user. User will select items from menu along with the quantity. (eg 1. Dosa 2. Samosa 3. Idli ... 10 . Generate Bill ) Assign fixed prices to food items(hard code the prices)
+When user enters 'Generate Bill' option(10) , display total bill & exit.
+
+import java.util.Scanner;
+class FoodMenu
+{
+
+	public static void main(String[] args)
+	{
+		boolean done=false;
+		int choice,qty;
+		float price=0;
+		Scanner sc=new Scanner(System.in);
+		while(!done)
+		{
+			System.out.println("1.Dosa  Rs.10 \n 2.Idli  Rs.20 \n 3.Upma  Rs.25 \n 4.Generate Bill\n");
+			System.out.println("Enter the choice");
+			choice=sc.nextInt();
+			switch(choice)
+			{
+				case 1: 
+					System.out.println("Enter the Quantity");
+					qty=sc.nextInt();
+					price=price+(10*qty);
+				break;
+				case 2: 
+					System.out.println("Enter the Quantity");
+					qty=sc.nextInt();
+					price=price+(20*qty);
+				break;		
+				case 3: 
+					System.out.println("Enter the Quantity");
+					qty=sc.nextInt();
+					price=price+(25*qty);
+				break;
+				case 4: 
+					System.out.println("Generated Bill :");
+					System.out.println("Total Price : "+price);
+					done=true;
+				break;
+				default:
+					System.out.println("Invalid Choice enter valid choice");
+				break;					
+			}
+		}	
+	}
+}
+**************************************************************************
+.2
+Create java application for the following
+Accept 2 numbers from user & operation to perform
+1. Add 2.Subtract 3. Multiply 4.Divide 5.Exit
+Display the result of the operation. 
+Java app must continue to run till user chooses exit option.
+
+import java.util.Scanner;
+class Operations
+{
+
+	public static void main(String[] args)
+	{
+		boolean done=false;
+		int choice;
+		float num1=0,num2=0;
+		Scanner sc=new Scanner(System.in);
+		while(!done)
+		{
+			System.out.println("1.Add   \n 2.Substract  \n 3.Multiple   \n 4.Divide \n 5.Exit");
+			System.out.println("Enter the choice");
+			choice=sc.nextInt();
+			switch(choice)
+			{
+				case 1: 
+					System.out.println("Enter the 2 Numbers:");
+					num1=sc.nextInt();
+					num2=sc.nextInt();
+					System.out.println("Addition : "+num1+" + "+num2+":"+(num1+num2));
+				break;
+				
+				case 2: 
+					System.out.println("Enter the 2 Numbers:");
+					num1=sc.nextInt();
+					num2=sc.nextInt();
+					System.out.println("Substraction : "+num1+" - "+num2+":"+(num1-num2));
+				break;
+						
+				case 3: 
+					System.out.println("Enter the 2 Numbers:");
+					num1=sc.nextInt();
+					num2=sc.nextInt();
+					System.out.println("Multiplication : "+num1+" * "+num2+":"+(num1*num2));
+				break;
+				
+				case 4: 
+					System.out.println("Enter the 2 Numbers:");
+					num1=sc.nextInt();
+					num2=sc.nextInt();
+					System.out.println("Divide : "+num1+" / "+num2+":"+(num1/num2));
+				break;
+				
+				case 5: done=true;
+				break;
+				
+				default:
+					System.out.println("Invalid Choice enter valid choice");
+				break;					
+			}
+		}
+		System.out.println("Exit Successfully");
+			
+	}
+}
+
+*********************************************************************************
+.3 Accept 2 double values from User (using Scanner). Check data type.
+. If arguments are not doubles , supply suitable error message & terminate.
+If numbers are double values , print its average.
+Hint : Method of Scanner to use : hasNextDouble , nextDouble 
+
+
+class Main {
+    public static void main(String args[]) {
+        byte b1 = 10;
+        byte b2 = 12;
+        byte b3 = b1 + b2;
+        System.out.print(b3);
+    }
+}
